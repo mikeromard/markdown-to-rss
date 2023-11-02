@@ -1,0 +1,17 @@
+<rss version="2.0" encoding="utf-8">
+    <channel>
+        <title>Test changelog</title>
+        <link>example.com</link>
+        <description>Testing a markdown to RSS script.</description>
+        <language>en-us</language>
+        <pubDate>02 Nov, 2023 15:16</pubDate>
+        <item>
+            <title>Title of post goes here</title>
+            <link>example.com/link1</link>
+            <category>Post categories go here</category>
+            <description>Body of post goes here</description>
+            <pubDate>Date of post goes here</pubDate>
+            <guid>example.com/link1</guid>
+        </item>
+    </channel>
+</rss>
