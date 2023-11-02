@@ -13,5 +13,19 @@
             <pubDate>Date of post goes here</pubDate>
             <guid>example.com/link1</guid>
         </item>
+        <item>
+<title>31 October 2023</title>
+<category>New, Beta</category>
+<pubDate>02 Nov, 2023 16:42</pubDate><p><a href="https://example.com">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: </p>
+<ul>
+<li>ut enim ad minim veniam </li>
+<li>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+</ul>
+</item>
+		<item>
+<title>18 October 2023</title>
+<category>Improved</category>
+<pubDate>02 Nov, 2023 16:42</pubDate><p>Duis aute irure dolor in <code>reprehenderit in voluptate</code> velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</item>
     </channel>
 </rss>

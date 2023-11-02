@@ -14,7 +14,7 @@ xml_out = f"<rss>{markdown.markdown(md_text)}</rss>"
 
 items = re.findall("(<h2>[\S \n]*?)(?=\n<h2|<\/rss)",xml_out)
 
-#rewrite test_feed.xml
+#rewrite test_feed.xml - this section can be dropped, aside from the for loop, which will be needed in the next section
 with open("test_feed.xml","w",encoding="utf-8") as rss_file_out:
     rss_file_out.write('<rss version="2.0" encoding="utf-8">\n')
     rss_file_out.write("\t<channel>\n")
@@ -28,6 +28,9 @@ with open("test_feed.xml","w",encoding="utf-8") as rss_file_out:
         item_tree = etree.fromstring(item)
         item_tree[0].tag = "title"
         item_tree[1].tag = "category"
+        pubDate = etree.Element("pubDate")
+        item_tree.insert(2, pubDate)
+        pubDate.text = str(f"{timestamp}")
         rss_file_out.write(f'\t\t{etree.tostring(item_tree, encoding="unicode")}\n')
     rss_file_out.write("\t</channel>\n")
     rss_file_out.write("</rss>")
@@ -37,4 +40,20 @@ rss_out_tree = etree.parse("test_rss_feed.xml")
 rss_out_root = rss_out_tree.getroot()
 for pubDate in rss_out_root.findall("./channel/pubDate"):
     pubDate.text = str(timestamp)
+rss_out_tree.write("test_rss_feed.xml") 
+with open("test_rss_feed.xml","r") as rss_feed_file:
+    rss_feed_text = rss_feed_file.read()
+for item in items:
+    item = f"<item>{item}</item>"
+    item_tree = etree.fromstring(item)
+    item_tree[0].tag = "title"
+    item_tree[1].tag = "category"
+    pubDate = etree.Element("pubDate")
+    item_tree.insert(2, pubDate)
+    pubDate.text = str(f"{timestamp}")
+    if etree.tostring(item_tree, encoding="unicode") in rss_feed_text: # not working
+        pass
+    else:
+        new_item = etree.Element("item")
+        rss_out_root[0].insert(5,new_item) #inserting empty <item> in the right place!
 rss_out_tree.write("test_rss_feed.xml") 
