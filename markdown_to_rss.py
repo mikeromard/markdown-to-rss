@@ -10,40 +10,18 @@ timestamp = datetime.datetime.now().strftime("%d %b, %Y %H:%M")
 with open("test_product_updates.md", "r") as md_file:
     md_text = md_file.read()
     
-xml_out = f"<rss>{markdown.markdown(md_text)}</rss>"
+xml_out = f"<rss>{markdown.markdown(md_text)}</rss>" #convert the md to HTML and wrap in <rss> element
 
-items = re.findall("(<h2>[\S \n]*?)(?=\n<h2|<\/rss)",xml_out)
-
-#rewrite test_feed.xml - this section can be dropped, aside from the for loop, which will be needed in the next section
-with open("test_feed.xml","w",encoding="utf-8") as rss_file_out:
-    rss_file_out.write('<rss version="2.0" encoding="utf-8">\n')
-    rss_file_out.write("\t<channel>\n")
-    rss_file_out.write("\t\t<title>Test changelog</title>\n")
-    rss_file_out.write("\t\t<link>example.com</link>\n")
-    rss_file_out.write("\t\t<description>Testing a markdown to RSS script.</description>\n")
-    rss_file_out.write("\t\t<language>en-us</language>\n")
-    rss_file_out.write(f"\t\t<pubDate>{timestamp}</pubDate>\n")
-    for item in items:
-        item = f"<item>\n{item}\n</item>"
-        item_tree = etree.fromstring(item)
-        item_tree[0].tag = "title"
-        item_tree[1].tag = "category"
-        pubDate = etree.Element("pubDate")
-        item_tree.insert(2, pubDate)
-        pubDate.text = str(f"{timestamp}")
-        rss_file_out.write(f'\t\t{etree.tostring(item_tree, encoding="unicode")}\n')
-    rss_file_out.write("\t</channel>\n")
-    rss_file_out.write("</rss>")
+items = re.findall("(<h2>[\S \n]*?)(?=\n<h2|<\/rss)",xml_out) #this finds all <item> elements
 
 #update test_rss_feed.xml
 rss_out_tree = etree.parse("test_rss_feed.xml")
 rss_out_root = rss_out_tree.getroot()
-for pubDate in rss_out_root.findall("./channel/pubDate"):
+for pubDate in rss_out_root.findall("./channel/pubDate"): #update the timestamp for the feed
     pubDate.text = str(timestamp)
-rss_out_tree.write("test_rss_feed.xml") 
+#rss_out_tree.write("test_rss_feed.xml") 
 with open("test_rss_feed.xml","r") as rss_feed_file:
     rss_feed_text = rss_feed_file.read()
-#print(rss_feed_text)
 for item in items:
     item = f"<item>{item}</item>"
     item_tree = etree.fromstring(item)
@@ -51,10 +29,10 @@ for item in items:
     item_tree[1].tag = "category"
     pubDate = etree.Element("pubDate")
     item_tree.insert(2, pubDate)
-    pubDate.text = str(f"{timestamp}")
-    if str(item_tree[0].text) in rss_feed_text: #this one seems to be working
-        pass
-    else:
-        new_item = etree.Element("item")
-        rss_out_root[0].insert(5,new_item) #inserting empty <item> in the right place! need to figure out how to add content
+    pubDate.text = str(f"{timestamp}") #update the timestamp for the item
+    if str(item_tree[0].text) in rss_feed_text: # if an item with the same title as this item is already in the output file, do nothing
+        pass #would be nice to update the content of item if it differs though... maybe get item's current position, extract original pubDate, and reoutput to that position with original pubDate? 
+    else: #if the item is not in the output file, add it as the first <item> in <channel> after <pubDate>
+        rss_out_root[0].insert(5,item_tree) 
+etree.indent(rss_out_tree, space="\t") #this is what makes the output pretty
 rss_out_tree.write("test_rss_feed.xml") 
