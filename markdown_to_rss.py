@@ -43,6 +43,7 @@ for pubDate in rss_out_root.findall("./channel/pubDate"):
 rss_out_tree.write("test_rss_feed.xml") 
 with open("test_rss_feed.xml","r") as rss_feed_file:
     rss_feed_text = rss_feed_file.read()
+#print(rss_feed_text)
 for item in items:
     item = f"<item>{item}</item>"
     item_tree = etree.fromstring(item)
@@ -51,9 +52,9 @@ for item in items:
     pubDate = etree.Element("pubDate")
     item_tree.insert(2, pubDate)
     pubDate.text = str(f"{timestamp}")
-    if etree.tostring(item_tree, encoding="unicode") in rss_feed_text: # not working
+    if str(item_tree[0].text) in rss_feed_text: #this one seems to be working
         pass
     else:
         new_item = etree.Element("item")
-        rss_out_root[0].insert(5,new_item) #inserting empty <item> in the right place!
+        rss_out_root[0].insert(5,new_item) #inserting empty <item> in the right place! need to figure out how to add content
 rss_out_tree.write("test_rss_feed.xml") 
