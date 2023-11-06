@@ -43,10 +43,10 @@ for item in items: #need to add something here to wrap the right item subelement
         item_pubDate.text = str(f"{timestamp}") #update the timestamp for the item
         item_link = etree.Element("link")
         item_out_tree.insert(3, item_link)
-        item_link.text = f"https://example.com/test#{str(item_title.text).replace(' ', '-')}"
+        item_link.text = f"https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#{str(item_title.text).replace(' ', '-')}"
         item_guid = etree.Element("guid")
         item_out_tree.insert(4, item_guid)
-        item_guid.text = f"https://example.com/test#{str(item_title.text).replace(' ', '-')}"
+        item_guid.text = f"https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#{str(item_title.text).replace(' ', '-')}"
         for title in item_tree.findall("title"):
             item_tree.remove(title)
         for category in item_tree.findall("category"):
