@@ -16,7 +16,7 @@ Lorem ipsum dolor sit amet! Consectetur adipiscing elit!
 1. quis nostrud exercitation ullamco
 2. laboris nisi ut aliquip ex ea commodo consequat
 
-Duis aute irure dolor in `reprehenderit` in voluptate velit. [Esse cillum dolore](example.com) eu fugiat nulla pariatur.
+Duis aute irure dolor in `reprehenderit` in voluptate velit. [Esse cillum dolore](https://example.com) eu fugiat nulla pariatur.
 
 ## 01 November 2023
 
