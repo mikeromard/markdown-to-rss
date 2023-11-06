@@ -5,7 +5,7 @@
 		<description>Testing a markdown to RSS script.</description>
 		<language>en-us</language>
 		<pubDate>Mon, 06 Nov 2023 13:53:51 GMT</pubDate>
-		<atom:link href="https://github.com/mikeromard/markdown-to-rss/blob/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>03 November 2023</title>
 			<category>Alpha</category>
