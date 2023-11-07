@@ -10,11 +10,11 @@ This is a proof-of-concept for updating an RSS feed from a markdown file that se
     1. Creates a timestamp that is a valid [RFC-822](http://www.faqs.org/rfcs/rfc822.html) date-time.
     2. Converts the content of `test_product_updates.md` from markdown to HTML.
     3. Wraps that HTML in an `<rss>` element and uses a regex to extract the entries (all text from the start of an h2 element to the end of an h2 or rss element) from that element into a list.
-    4. Update the `<pubDate>` element in `test_rss_feed.xml` with the value of the timestamp from step 1.
-    5. For each entry in the list from step 3:
+    4. Update the `<pubDate>` element in `test_rss_feed.xml` with the value of the timestamp from step i.
+    5. For each entry in the list from step iii:
         1. Format the entry into an `<item>` with a `<title>` (from the item's `<h2>` element), and a `<category>` (from the first `<p>`). 
         2. Checks to see if the item title text already exists in `test_rss_feed.xml`. If it does, it does nothing else for that item. If it does not, it adds these elements: 
-            * `<pubDate>` (from the timestamp in step 1) 
+            * `<pubDate>` (from the timestamp in step i) 
             * `<link>` (appends the `<title>` to `https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#`, but replace spaces with `-`) 
             * `<guid>` (same as `<link>`) 
             * `<description>` (outputs a string of what's left from the entry after removing the `<title>` and `<category>` elements)
