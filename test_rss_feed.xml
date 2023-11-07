@@ -1,11 +1,22 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
 	<channel>
 		<title>Test changelog</title>
 		<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md</link>
 		<description>Testing a markdown to RSS script.</description>
 		<language>en-us</language>
-		<pubDate>Mon, 06 Nov 2023 13:53:51 GMT</pubDate>
-		<atom:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Tue, 07 Nov 2023 14:07:32 GMT</pubDate>
+		<item>
+			<title>07 November 2023</title>
+			<category>Test</category>
+			<pubDate>Tue, 07 Nov 2023 14:07:32 GMT</pubDate>
+			<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#07-November-2023</link>
+			<description>&lt;p&gt;Testing to see if the workflow is triggered and runs successfully when I update this file.&lt;/p&gt;
+&lt;p&gt;First attempt failed on &lt;code&gt;pip install -r requirements&lt;/code&gt;. That command is missing the file extension (the file is &lt;code&gt;requirements.txt&lt;/code&gt;, not &lt;code&gt;requirements&lt;/code&gt;). Trying again.&lt;/p&gt;
+&lt;p&gt;Second attempt, the workflow completed without error, but didn't update &lt;code&gt;test_rss_feed.xml&lt;/code&gt;. Trying to add &lt;code&gt;git push&lt;/code&gt; to the workflow.&lt;/p&gt;
+&lt;p&gt;Third attempt, looks like a permissions issue on the &lt;code&gt;git push&lt;/code&gt;. Trying to give the workflow write permissions.&lt;/p&gt;</description>
+			<guid>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#07-November-2023</guid>
+		</item>
+		<ns0:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>03 November 2023</title>
 			<category>Alpha</category>
