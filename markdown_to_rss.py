@@ -19,11 +19,10 @@ rss_out_tree = etree.parse("test_rss_feed.xml")
 rss_out_root = rss_out_tree.getroot()
 for pubDate in rss_out_root.findall("./channel/pubDate"): #update the timestamp for the feed
     pubDate.text = str(timestamp)
-#rss_out_tree.write("test_rss_feed.xml") 
 with open("test_rss_feed.xml","r") as rss_feed_file:
     rss_feed_text = rss_feed_file.read()
-for item in items: #need to add something here to wrap the right item subelements in a description element, and output the < as &lt; and > as &gt;, or wrap in <[!CDATA[ and ]]> so the xml validates
-    item = f"<item>{item}</item>" #need to add unique guid to item (could use this to check if item in output file rather than title). Should be URI for the post, ideally
+for item in items: 
+    item = f"<item>{item}</item>" 
     item_tree = etree.fromstring(item)
     item_tree[0].tag = "title"
     item_tree[1].tag = "category"
@@ -54,7 +53,7 @@ for item in items: #need to add something here to wrap the right item subelement
         item_description = etree.Element("description")
         item_out_tree.insert(4, item_description)
         item_out_string = etree.tostring(item_tree, encoding="unicode").replace("<item>","").replace("</item>","")
-        item_description.text = f"{item_out_string}" #need to drop the title and categories from this, but otherwise this may be working
-        rss_out_root[0].insert(5,item_out_tree) # insert(5 <-- update this number if any more elements are added before the first <item>
+        item_description.text = f"{item_out_string}" 
+        rss_out_root[0].insert(6,item_out_tree) # insert(6 <-- update this number if any more elements are added before the first <item>
 etree.indent(rss_out_tree, space="\t") #this is what makes the output pretty
 rss_out_tree.write("test_rss_feed.xml") 
