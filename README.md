@@ -21,6 +21,7 @@ This is a proof-of-concept for updating an RSS feed from a markdown file that se
         3. Inserts the `<item>` after the `<pubDate>` element.
         4. Writes the changes to `test_rss_feed.xml`.
 4. Commit and push the changes from step 3 to the `main` branch.
+5. Anyone subscribed to `https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml` in an RSS feed reader sees the new item in their feed reader after the feed is refreshed (in my brief testing with NetNewsWire, I saw the new item within a minute or two).
 
 
 ## Current known limitations and issues:
