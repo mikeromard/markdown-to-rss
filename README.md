@@ -4,7 +4,7 @@ This is a proof-of-concept for updating an RSS feed from a markdown file that se
 
 ## How it works:
 
-1. The workflow starts when a push is made to the `main` branch that includes an update to `test_product_updates.md`.
+1. The workflow (`.github/workflows/markdown_to_rss.yml`) starts when a push is made to the `main` branch that includes an update to `test_product_updates.md`.
 2. The workflow sets up python 3.9, installs the packages listed in `requirements.txt`, and then runs the `markdown_to_rss.py` script.
 3. The `markdown_to_rss.py` script does the following:
     1. Creates a timestamp that is a valid [RFC-822](http://www.faqs.org/rfcs/rfc822.html) date-time.
