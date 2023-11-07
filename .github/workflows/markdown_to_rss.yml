@@ -1,0 +1,23 @@
+name: Update RSS feed
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'test_product_updates.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: install python packages
+        run: 
+          pip install -r requirements
+      - name: run markdown_to_rss.py script
+        run: python markdown_to_rss.py
