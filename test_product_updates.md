@@ -10,6 +10,8 @@ Testing to see if the workflow is triggered and runs successfully when I update 
 
 First attempt failed on `pip install -r requirements`. That command is missing the file extension (the file is `requirements.txt`, not `requirements`). Trying again.
 
+Second attempt, the workflow completed without error, but didn't update `test_rss_feed.xml`. Trying to add `git push` to the workflow.
+
 ## 03 November 2023
 
 Alpha
