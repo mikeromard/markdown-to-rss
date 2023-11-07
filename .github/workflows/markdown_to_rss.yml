@@ -6,7 +6,8 @@ on:
     - main
     paths:
       - 'test_product_updates.md'
-
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -12,6 +12,8 @@ First attempt failed on `pip install -r requirements`. That command is missing t
 
 Second attempt, the workflow completed without error, but didn't update `test_rss_feed.xml`. Trying to add `git push` to the workflow.
 
+Third attempt, looks like a permissions issue on the `git push`. Trying to give the workflow write permissions.
+
 ## 03 November 2023
 
 Alpha
