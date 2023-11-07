@@ -18,6 +18,6 @@ jobs:
           python-version: '3.9'
       - name: install python packages
         run: 
-          pip install -r requirements
+          pip install -r requirements.txt
       - name: run markdown_to_rss.py script
         run: python markdown_to_rss.py

@@ -8,6 +8,8 @@ Test
 
 Testing to see if the workflow is triggered and runs successfully when I update this file.
 
+First attempt failed on `pip install -r requirements`. That command is missing the file extension (the file is `requirements.txt`, not `requirements`). Trying again.
+
 ## 03 November 2023
 
 Alpha
