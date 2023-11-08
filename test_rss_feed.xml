@@ -4,8 +4,16 @@
 		<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md</link>
 		<description>Testing a markdown to RSS script.</description>
 		<language>en-us</language>
-		<pubDate>Tue, 07 Nov 2023 14:17:48 GMT</pubDate>
+		<pubDate>Wed, 08 Nov 2023 13:00:23 GMT</pubDate>
 		<ns0:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Write-Only Memory</title>
+			<category>New feature</category>
+			<pubDate>Wed, 08 Nov 2023 13:00:23 GMT</pubDate>
+			<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Write-Only-Memory</link>
+			<description>&lt;p&gt;We've added Write-Only Memory (WOM) to all servers. WOM is used to store data that you are required to archive, but will never actually need to access again. &lt;/p&gt;</description>
+			<guid>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Write-Only-Memory</guid>
+		</item>
 		<item>
 			<title>07 November 2023</title>
 			<category>Test</category>
