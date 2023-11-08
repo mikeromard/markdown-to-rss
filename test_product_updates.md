@@ -2,6 +2,12 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+## Write-Only Memory
+
+New feature
+
+We've added Write-Only Memory (WOM) to all servers. WOM is used to store data that you are required to archive, but will never actually need to access again. 
+
 ## O7 November 2023 part 2
 
 Test
