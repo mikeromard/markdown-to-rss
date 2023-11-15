@@ -4,8 +4,24 @@
 		<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md</link>
 		<description>Testing a markdown to RSS script.</description>
 		<language>en-us</language>
-		<pubDate>Wed, 15 Nov 2023 14:04:04 GMT</pubDate>
+		<pubDate>Wed, 15 Nov 2023 14:12:22 GMT</pubDate>
 		<ns0:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Test 1</title>
+			<category>Test text</category>
+			<pubDate>Wed, 15 Nov 2023 14:12:22 GMT</pubDate>
+			<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Test-1</link>
+			<description>&lt;p&gt;Test test test&lt;/p&gt;</description>
+			<guid>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Test-1</guid>
+		</item>
+		<item>
+			<title>Test 2</title>
+			<category>Test</category>
+			<pubDate>Wed, 15 Nov 2023 14:12:22 GMT</pubDate>
+			<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Test-2</link>
+			<description>&lt;p&gt;Test text&lt;/p&gt;</description>
+			<guid>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Test-2</guid>
+		</item>
 		<item>
 			<title>Proof of concept just failed in live demo</title>
 			<category>Oops</category>
