@@ -2,6 +2,14 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+## Proof of concept just failed in live demo
+
+Oops
+
+There seems to be an issue, possibly caused by not including more than one line of text between headings. The XML file did update, but only the timestamp, after the last two merges.
+
+So I've added a second line of text to the entry that only had one, and I've added this entry as well.
+
 ## Test
 
 Test
@@ -11,6 +19,8 @@ Test text
 ## Test
 
 Test text
+
+Test test test
 
 ## Write-Only Memory
 
