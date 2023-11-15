@@ -4,8 +4,17 @@
 		<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md</link>
 		<description>Testing a markdown to RSS script.</description>
 		<language>en-us</language>
-		<pubDate>Wed, 15 Nov 2023 13:55:56 GMT</pubDate>
+		<pubDate>Wed, 15 Nov 2023 14:04:04 GMT</pubDate>
 		<ns0:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Proof of concept just failed in live demo</title>
+			<category>Oops</category>
+			<pubDate>Wed, 15 Nov 2023 14:04:04 GMT</pubDate>
+			<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Proof-of-concept-just-failed-in-live-demo</link>
+			<description>&lt;p&gt;There seems to be an issue, possibly caused by not including more than one line of text between headings. The XML file did update, but only the timestamp, after the last two merges.&lt;/p&gt;
+&lt;p&gt;So I've added a second line of text to the entry that only had one, and I've added this entry as well.&lt;/p&gt;</description>
+			<guid>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Proof-of-concept-just-failed-in-live-demo</guid>
+		</item>
 		<item>
 			<title>Write-Only Memory</title>
 			<category>New feature</category>
