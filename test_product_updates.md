@@ -10,13 +10,13 @@ There seems to be an issue, possibly caused by not including more than one line 
 
 So I've added a second line of text to the entry that only had one, and I've added this entry as well.
 
-## Test
+## Test 2
 
 Test
 
 Test text
 
-## Test
+## Test 1
 
 Test text
 
