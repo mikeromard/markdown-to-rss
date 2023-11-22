@@ -4,8 +4,16 @@
 		<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md</link>
 		<description>Testing a markdown to RSS script.</description>
 		<language>en-us</language>
-		<pubDate>Wed, 15 Nov 2023 14:12:22 GMT</pubDate>
+		<pubDate>Wed, 22 Nov 2023 18:54:39 GMT</pubDate>
 		<ns0:link href="https://raw.githubusercontent.com/mikeromard/markdown-to-rss/main/test_rss_feed.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Testing this automation again</title>
+			<category>Test</category>
+			<pubDate>Wed, 22 Nov 2023 18:54:39 GMT</pubDate>
+			<link>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Testing-this-automation-again</link>
+			<description>&lt;p&gt;This is some text. It's not particularly exciting text.&lt;/p&gt;</description>
+			<guid>https://github.com/mikeromard/markdown-to-rss/blob/main/test_product_updates.md#Testing-this-automation-again</guid>
+		</item>
 		<item>
 			<title>Test 1</title>
 			<category>Test text</category>
